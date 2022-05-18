@@ -10,6 +10,12 @@ app.get('/', (req, res) => {
 
 app.post('/register', (req, res) => {
   let name = req.body.name
+  let email = req.body.email
+  let password = req.body.password
+  res.send(`su nombre es: ${name} ,su password es:${password} y este es su email${email}`)
+})
+app.post('/login', (req, res) => {
+  let name = req.body.name
   let password = req.body.password
   res.send(`su nombre es: ${name} y su password es:${password}`)
 })
